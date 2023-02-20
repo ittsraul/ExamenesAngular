@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center text-uppercase" [ngStyle]="{'color':'white','background-color':'purple'}">{{title}}</h1>
+
+<form action="">
+    Nombre: <input type="text" name="nombre" [(ngModel)]="nombre" class="mt-3 mb-3"><br><br>
+    Primer Apellido: <input type="text" name="apellido" [(ngModel)]="apellido" class="mt-3 mb-3"><br><br>
+    Cargo: <input type="text" name="cargo" [(ngModel)]="cargo" class="mt-3 mb-3"><br><br>
+    <button type="submit" value="Registrar" class="btn btn-primary" (click)="registrarUsuario()" >ENVIAR</button>
+</form>
+
+<p *ngIf="registrado; else sinAsignar">{{mensaje}} con el nombre {{nombre}} {{apellido}} y con cargo <span [ngStyle]="{color: cargo=='director' ? 'red' : 'black'}">{{cargo}}</span></p>
+
+<ng-template #sinAsignar>
+    <p>Nadie registrado</p>
+</ng-template>
+
+        </div>
+    </div>
+</div>
+
+<br><br>
+
+<!-- <ul>
+    <li *ngFor="let task of entradas">{{task.title}}</li>
+</ul> -->

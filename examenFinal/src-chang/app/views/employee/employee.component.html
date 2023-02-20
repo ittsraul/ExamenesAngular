@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center text-uppercase" [ngStyle]="{'color':'white', 'background-color' : 'purple'}">{{title}}</h1>
+            <br><br>
+            <form class="form-group row" action="">
+                <div class="form-group col-md-3 mt-3">
+                    <label for="nombre">Nombre:
+                        <input type="text" name="nombre" id="nombre" placeholder="nombre" [(ngModel)]="cuadroNombre">
+                    </label>
+                </div>
+                <div class="form-group col-md-3 mt-3">
+                    <label for="apellido">Apellido:
+                        <input type="text" name="apellido" id="apellido" placeholder="nombre" [(ngModel)]="cuadroApellido">
+                    </label>
+                </div>
+                <div class="form-group col-md-3 mt-3">
+                    <label for="cargo">Cargo:
+                        <input type="text" name="cargo" id="cargo" placeholder="cargo" [(ngModel)]="cuadroCargo">
+                    </label>
+                </div>
+                <div class="form-group col-md-3 mt-3">
+                    <label for="salario">Salario:
+                        <input type="number" name="salario" id="salario" placeholder="salario" [(ngModel)]="cuadroSalario">
+                    </label>
+                </div>
+                <div class="col-12 mt-3 mb-3">
+                        <button type="submit" class="btn btn-primary" (click)="agregarEmpleado()">SUBMIT</button>
+                </div>
+            </form>
+            <app-list-employee *ngFor="let item of empleados; let i=index" [listEmployee]="item" [index]="i"></app-list-employee>
+        </div>
+    </div>
+</div>
+
+

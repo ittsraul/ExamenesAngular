@@ -1,0 +1,18 @@
+<br><br>
+<div class="container">
+    <h1 class="text-uppercase" [ngStyle]="{'text-align' : 'center', 'background-color' : 'purple', 'color' : 'white'}">{{ title }}</h1>
+    <form action="" class="form">
+        numero 1: <input type="number" class="input" [(ngModel)]="number1" name="number1"><br><br>
+
+        numero 2: <input type="number" [(ngModel)]="number2" name="number2"><br><br>
+        <div class="row">
+            <div class="col-3">  <button type="submit" class="btn btn-primary" value="sumar" (click)="sumar()">sumar</button>
+            </div>
+            <div class="col-3"><button type="submit" class="btn btn-primary" value="restar" (click)="restar()">restar</button></div>
+        </div>
+
+    </form>
+  <p class="mt-3 mb-3">Resultado: {{resultado}}</p>
+</div>
+    
+  

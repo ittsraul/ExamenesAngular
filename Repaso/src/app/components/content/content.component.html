@@ -1,0 +1,9 @@
+<div class="photo">
+  <div class="{{ clase }}">
+    <img *ngFor="let item of imagenes" (click)="makeBig($event)" src="{{item}}" alt="">
+  </div>
+  <span class="caption">{{ text }}</span>
+  <button (click)="Anterior()">Anterior</button>
+  <br>
+  <button (click)="Siguiente()">Siguiente</button>
+</div>

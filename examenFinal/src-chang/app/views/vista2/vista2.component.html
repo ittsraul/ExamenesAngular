@@ -1,0 +1,5 @@
+<app-form-starw (addPersonaje)="EncontrarPersonaje($event)"></app-form-starw>
+
+<div *ngFor="let item of roles">
+    {{item.title}} / {{item.director}} / {{item.starships[0]}}
+</div>

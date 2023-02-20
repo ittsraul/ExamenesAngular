@@ -1,0 +1,13 @@
+ <div class="container">
+    <div class="row">
+        <div class="col-12 text-center text-uppercase" *ngIf="mostrarForm">
+            <form class="form" (ngSubmit)="EnviarPersonajes()">
+                <label >
+                    <input type="text" name="nombre" id="nombre" value="nombre"  [(ngModel)]="name">
+                </label>
+                <button type="submit" value="Enviar" class="btn btn-primary">ENVIAR</button>
+            </form>
+        </div>
+    </div>
+</div> 
+

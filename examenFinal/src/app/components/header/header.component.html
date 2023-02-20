@@ -1,0 +1,32 @@
+<div *ngIf="navigation; then theirBlock else block2 " >
+
+</div>
+<ng-template #theirBlock>
+    <div class="navigation">
+    <ul >
+      <a class="nav-link logo"  >Vista 1</a>
+      <a class="nav-link "  [routerLink]="['Vista2']" (click)="onClick()">Vista 2</a>
+    </ul>
+    </div>
+
+    <div class="banner" style="background: url('https://static.eldiario.es/clip/0a1ee554-bcf7-4c32-9c2a-37e76297ef6f_16-9-discover-aspect-ratio_default_0.jpg')">
+        <div class="banner-text">
+            <h2>vista1</h2>
+        </div>
+  </div>
+</ng-template>
+<ng-template #block2>
+    <div class="navigation">
+        <ul >
+          <a class="nav-link " [routerLink]="['Vista1']" (click)="onClick()" >Vista 1</a>
+          <a class="nav-link logo"  >Vista 2</a>
+        </ul>
+    </div>
+    <div class="banner" style="background: url('https://images.pexels.com/photos/3459901/pexels-photo-3459901.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load ')">
+        <div class="banner-text">
+            <h2>vista2</h2>
+        </div>
+  </div>
+</ng-template>
+
+<div class="content"></div>

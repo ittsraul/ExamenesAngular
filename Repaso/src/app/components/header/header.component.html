@@ -1,0 +1,14 @@
+<div class="navigation">
+    <ul>
+      <a class="nav-link {{ (currView === 'one') ? 'logo' : '' }}" (click)="changeView($event)" [routerLink]="['view-one']">Vista 1</a>
+      <a class="nav-link {{ (currView === 'one') ? '' : 'logo' }}" (click)="changeView($event)" [routerLink]="['view-two']">Vista 2</a>
+    </ul>
+  </div>
+  <div class="banner" style="background-image: url('{{img}}')">
+    <div class="banner-text">
+      <h2>{{ (currView === 'one') ? 'Vista 1' : 'Vista 2' }}</h2>
+    </div>
+  </div>
+
+  <div class="content">
+  </div>

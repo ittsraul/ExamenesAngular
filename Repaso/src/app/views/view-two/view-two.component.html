@@ -1,0 +1,5 @@
+<app-form (nombreEmit)="nombreEmitted($event)"></app-form>
+
+<div *ngFor="let item of infoPeliculas">
+    {{ item.title }} / {{ item.director }} / {{item.starships[0]}}
+</div>
