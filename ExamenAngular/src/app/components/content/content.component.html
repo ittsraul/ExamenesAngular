@@ -1,0 +1,6 @@
+<div class="photo">
+    <div class="{{ clase }}">
+        <img *ngFor="let item of image" (click)="Agrandar($event)" src="{{item}}">
+    </div>
+    <span class="caption">{{ text }}</span>
+</div>

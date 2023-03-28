@@ -1,0 +1,22 @@
+  <div class="navigation">
+    <form method="post" action="#" (ngSubmit)="onSubmit()">
+      <input type="text" name="Name" [(ngModel)]="nombre" />
+    </form>
+  </div>
+<div [ngSwitch]="fondo">
+  <div *ngSwitchCase="'case1'" class="banner" style="background: url('https://static.eldiario.es/clip/0a1ee554-bcf7-4c32-9c2a-37e76297ef6f_16-9-discover-aspect-ratio_default_0.jpg')">
+     <div class="banner-text" >
+      <a  [routerLink]="['view-one']">Vista 1</a>
+    </div>
+  </div>
+  <div *ngSwitchCase="'case2'" class="banner" style="background: url('https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/06/rick-morty-2381623.jpg?tf=3840x')">
+    <div class="banner-text" >
+      <a  [routerLink]="['view-two']">Vista 2</a>
+    </div>
+  </div>
+
+</div>
+
+ 
+  <div class="content">
+  </div>
